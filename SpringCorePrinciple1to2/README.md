@@ -18,10 +18,10 @@ public Member(Long id, String name, Grade grade) {
       this.grade = grade;
 }
 ```
-Member 클래스의 Constructor 부분이다.   
-private의 id, name, grade가 있고, 이는 getter, setter으로 접근가능하다.   
+Member 클래스의 **Constructor 부분**이다.   
+private의 **id, name, grade**가 있고, 이는 **getter, setter으로 접근가능**하다.   
 ## 회원 저장소 개발
-여기서는 회원 정보를 저장하고 불러온다.   
+여기서는 **회원 정보를 저장하고 불러온다.**   
 ```java
 public interface MemberRepository {
       void save(Member member);
@@ -64,14 +64,14 @@ void test()
 //then
 }
 ```
-이와 같은 구성으로 테스트 케이스를 만들 수 있다.   
-assertTaht().isEqualto()으로 검증 가능하다.   
+이와 같은 구성으로 **테스트 케이스를 만들 수 있다.**   
+**assertTaht().isEqualto()으로 검증** 가능하다.   
 ## 코드 설계가 잘 되었는가
-* 다른 저장소로 변경할 때 OCP를 준수할까
-* DIP를 잘 지키고 있는가
-* DI문제는 없는가
-역할과 구현을 분리하였기에 우리는 구현 객체는 자유롭게 적용 가능하다.   
-예를 들어, 할인 정책이 존재하는데, 고정 1000원 할인에서 10% 할인으로 바뀌었을 때, DiscountPolicy라는 interface아래에서 구현체만 변경 되기에, 코드의 수정이 크지 않을 것이다.   
+* 다른 저장소로 변경할 때 **OCP**를 준수할까
+* **DIP**를 잘 지키고 있는가
+* **DI**문제는 없는가
+역할과 구현을 분리하였기에 우리는 **구현 객체는 자유롭게 적용 가능하다.**   
+예를 들어, 할인 정책이 존재하는데, 고정 1000원 할인에서 10% 할인으로 바뀌었을 때, DiscountPolicy라는 interface아래에서 구현체만 변경 되기에, **코드의 수정이 크지 않을 것이다.**   
 ### Cont’d
 프로젝트를 살펴보면, 의존관계와 구조가 좋은 상황은 아니다.   
 따라서 객체 지향을 따르는 원칙을 적용하고 스프링으로 전환하는 과정을 할 것이다. 
