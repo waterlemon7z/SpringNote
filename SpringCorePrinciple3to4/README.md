@@ -42,6 +42,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 * 스프링 컨테이너 생성
 * 스프링 빈 등록
 * 스프링 빈 의존관계 설정   
+
 ## 스프링 컨테이너 조회
 ```java
 String[] beanDefinitionNames = ac.getBeanDefinitionNames();
